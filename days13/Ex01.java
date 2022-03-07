@@ -36,7 +36,7 @@ public class Ex01 {
 		// 가독성이 더 좋은 코딩 **
 		int[] temp = (m.length == midx) ? n : m; // 남은 배열
 		int tempidx = (m.length == midx) ? nidx : midx; // 남은 배열의 인덱스
-		for (int i = midx; i < temp.length; i++) {
+		for (int i = tempidx; i < temp.length; i++) {
 			mn[mnidx++] = temp[i];
 		} // i for
 		

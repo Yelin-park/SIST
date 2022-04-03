@@ -49,14 +49,17 @@ public class Run {
 		         else if(gameselect == 1) team = kr.doublesGame(); // 복식게임 - 동성 4명
 		         else if(gameselect == 2) team = kr.mixedDoubles(); // 혼합복식게임 - 한 팀에 남,여로 구성
 
-		         // System.out.println("--------------------------------------------------");
-		         System.out.println("───────────────────────────────────────────────────");
-		         System.out.println("\t\tA팀\t\tB팀");
-		         System.out.printf("\t\t%s\t\t%s\n\t\t%s\t\t%s\n",team[0],team[1],team[2] == null? "": team[2],team[3]== null? "": team[3]);
-		         System.out.println("───────────────────────────────────────────────────");
+			// 계수기 출력하하는 부분
+		        System.out.println("───────────────────────────────────────────────────");
+				System.out.println("\t\tA팀\t\tB팀");
+				if (sGame.equals("0")) 
+					System.out.printf("\t\t%s\t\t%s\n",team[0],team[1]);
+				else
+					System.out.printf("\t\t%s\t\t%s\n\t\t%s\t\t%s\n",team[0],team[2],team[1],team[3]);
+				System.out.println("───────────────────────────────────────────────────");
+			      
 		         // 게임 진행 후 결과 출력하는 코딩
 		         Set set = new Set();		         
-		         
 		         while (!(set.aSet == setCnt || set.bSet == setCnt)) {
 		            set.pointWinner(set.winnerWho());
 		            set.dispScoreBoard();

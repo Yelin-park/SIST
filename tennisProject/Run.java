@@ -25,17 +25,13 @@ public class Run {
 		         do {
 		             System.out.println(">>> 테니스 게임을 시작합니다. 게임 종류를 선택하세요.\n  단식(0), 복식(1), 혼합복식(2) <<<");
 		             sGame = sc.next();
-		             if(!sGame.matches(regex)) 
-		                System.out.println("[알림] 잘못 입력했습니다. 0~2 값을 입력하세요");
+		             if(!sGame.matches(regex))  System.out.println("[알림] 잘못 입력했습니다. 0~2 값을 입력하세요");
 		         }while(!sGame.matches(regex));
 		         
 		          do {
 		             System.out.print(">>> 세트 수( 3set(1) / 5set(2) ) 정해주세요. ");
 		             setNum = sc.next();
-		             if(!setNum.matches("[1-2]")) {
-		                System.out.println("[알림] 잘못 입력했습니다. 1~2 값을 입력하세요");
-		                continue;
-		             }
+		             if(!setNum.matches("[1-2]"))  System.out.println("[알림] 잘못 입력했습니다. 1~2 값을 입력하세요");
 		          } while (!setNum.matches("[1-2]"));
 		         setCnt = Integer.parseInt(setNum) + 1;
 

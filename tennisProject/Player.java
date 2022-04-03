@@ -85,7 +85,7 @@ public class Player{ //implements disp
 //
 //   }
    
-   
+   /*
    public Player getPlayer(int cnt) {                         // 선수 호출
       try (FileReader fr = new FileReader(path);
             BufferedReader br = new BufferedReader(fr);){
@@ -104,7 +104,7 @@ public class Player{ //implements disp
       }
       return null;
    }
-
+*/
 
    public void dispScoreBoard() {                           // 전체 선수 출력
       try ( FileReader fr = new FileReader(path) ;
